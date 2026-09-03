@@ -35,6 +35,8 @@ Empty links are intentionally not rendered. Add Norman's verified LinkedIn, Upwo
 
 The current supplied portrait is at `public/images/profile/norman.png`. To replace it, use the same filename or update the path in `app/page.tsx`. A square image of at least 1200×1200 pixels works well.
 
+The navigation and footer logo is stored at `public/images/brand/nlc-logo.png`.
+
 ## Add project screenshots
 
 Put anonymized images in `public/images/projects/`. Add `featuredImage` and `gallery` paths to a project in `data/projects.ts`, then replace or extend the `ProjectVisual` component in `components/site/project-visual.tsx` to render them. Never publish confidential names or source data.

@@ -50,8 +50,8 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outli
   width: min(1160px, calc(100% - 40px)); margin-inline: auto;
   border-bottom: 1px solid var(--border); background: rgba(7,10,15,.8); backdrop-filter: blur(18px);
 }
-.wordmark { font: 700 18px/1 var(--font-geist-mono); letter-spacing: -.04em; }
-.wordmark span { color: var(--accent); }
+.wordmark { display: flex; align-items: center; height: 48px; }
+.brand-logo { display: block; width: 128px; height: auto; object-fit: contain; }
 .desktop-nav { display: flex; align-items: center; gap: 32px; color: var(--muted); font-size: 13px; }
 .desktop-nav a { transition: color .2s ease; }
 .desktop-nav a:hover { color: white; }
@@ -185,6 +185,7 @@ h1 em { color: var(--accent); font-style: normal; font-weight: 400; }
 .contact-actions { justify-content: center; }
 .footer { display: grid; grid-template-columns: 1fr auto auto; gap: 40px; align-items: end; padding-block: 34px; border-top: 1px solid var(--border); }
 .footer > div:first-child { display: grid; gap: 6px; }
+.footer-logo { width: 108px; height: auto; margin-bottom: 10px; }
 .footer strong { font-size: 14px; }
 .footer span, .footer p, .footer-links { margin: 0; color: var(--muted); font-size: 11px; }
 .footer-links { display: flex; gap: 20px; }
