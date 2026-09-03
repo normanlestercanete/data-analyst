@@ -12,7 +12,7 @@ export function ProjectVisual({ variant, large = false }: { variant: Project['vi
     <div className={`data-visual data-visual--${variant} ${large ? 'data-visual--large' : ''}`} aria-hidden="true">
       <div className="visual-topline"><span>{labels[variant][0]}</span><i>ANONYMIZED VIEW</i></div>
       <div className="visual-grid">
-        <div className="visual-metric"><small>{labels[variant][1]}</small><strong>{variant === 'archive' ? '10 yr' : variant === 'occupancy' ? '7 sites' : '12 mo'}</strong><span>Reporting scope</span></div>
+        <div className="visual-metric"><small>{labels[variant][1]}</small><strong>{variant === 'archive' ? '10 yr' : variant === 'occupancy' ? '34 sites' : '12 mo'}</strong><span>Reporting scope</span></div>
         <div className="visual-chart">
           <div className="bars">{bars.map((height, index) => <i key={index} style={{ height: `${height}%` }} />)}</div>
           <div className="axis"><span>01</span><span>04</span><span>07</span><span>10</span></div>
