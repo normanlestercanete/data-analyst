@@ -13,7 +13,7 @@ export const profile = {
   // Add /resume/norman-lester-canete-resume.pdf after placing the file in public/resume.
   resumeUrl: '',
   // Set this to your production domain (for example https://yourdomain.com) after deployment.
-  siteUrl: '',
+  siteUrl: 'https://norman-lester-canete.simple-space-2280.chatgpt.site',
 };
 
 export const upworkStats = [
