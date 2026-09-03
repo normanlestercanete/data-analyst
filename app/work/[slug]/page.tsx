@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Navigation } from '@/components/site/navigation';
 import { ProjectVisual } from '@/components/site/project-visual';
 import { Footer } from '@/components/site/footer';
 import { getProject, projects } from '@/data/projects';
 import { profile } from '@/data/profile';
+import { publicPath } from '@/lib/paths';
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
-  const url = profile.siteUrl ? `${profile.siteUrl}/work/${project.slug}` : undefined;
+  const url = profile.siteUrl ? `${profile.siteUrl}/work/${project.slug}.html` : undefined;
   return {
     title: `${project.title} — ${profile.name}`,
     description: project.description,
@@ -38,7 +38,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <Navigation />
       <article>
         <header className="case-hero shell">
-          <Link className="back-link" href="/#work"><ArrowLeft size={15} /> Back to selected work</Link>
+          <a className="back-link" href={publicPath('/#work')}><ArrowLeft size={15} /> Back to selected work</a>
           <p className="eyebrow"><span /> Anonymized case study · 0{index + 1}</p>
           <h1>{project.title}</h1>
           <div className="case-intro">
@@ -60,10 +60,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <section className="case-content"><h2>05 / Technical solution</h2><div><p>{project.solution}</p></div></section>
           <section className="case-content"><h2>06 / Result</h2><div><p>{project.outcome}</p></div></section>
 
-          <Link className="next-project" href={`/work/${nextProject.slug}`}>
+          <a className="next-project" href={publicPath(`/work/${nextProject.slug}.html`)}>
             <div><span>Next case study</span><strong>{nextProject.title}</strong></div>
             <ArrowRight size={28} />
-          </Link>
+          </a>
         </div>
       </article>
       <Footer />

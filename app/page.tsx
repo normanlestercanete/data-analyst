@@ -8,6 +8,7 @@ import { Footer } from '@/components/site/footer';
 import { profile } from '@/data/profile';
 import { expertise, skills } from '@/data/skills';
 import { projects } from '@/data/projects';
+import { publicPath } from '@/lib/paths';
 
 const workingApproach = [
   { title: 'Understand', copy: 'Clarify the business question, reporting requirements, decision context, and definitions that need to hold true.' },
@@ -54,7 +55,7 @@ export default function Home() {
 
         <div className="portrait-wrap">
           <div className="portrait-frame">
-            <Image src="/images/profile/norman.png" alt="Norman Lester Canete outdoors" width={1024} height={1024} priority sizes="(max-width: 820px) 100vw, 38vw" />
+            <Image src={publicPath('/images/profile/norman.png')} alt="Norman Lester Canete outdoors" width={1024} height={1024} priority sizes="(max-width: 820px) 100vw, 38vw" />
             <div className="portrait-caption">
               <span>{profile.name}</span>
               <small>{profile.positioning}</small>

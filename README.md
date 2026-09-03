@@ -57,6 +57,10 @@ Then set `resumeUrl` to `/resume/norman-lester-canete-resume.pdf` in `data/profi
 4. Use `dist/client` as the output directory.
 5. Deploy, then set `siteUrl` in `data/profile.ts` to the final HTTPS URL and redeploy so canonical, sitemap, Open Graph, and Twitter metadata use the correct domain.
 
+## Deploy to GitHub Pages
+
+The included workflow publishes the portfolio to `https://normanlestercanete.github.io/data-analyst/` after every push to `main`. It builds with the `/data-analyst` base path so navigation, project pages, and images work from the repository URL.
+
 ## Connect a custom domain
 
 In the Vercel project, open **Settings → Domains**, add the domain, and follow the DNS instructions. Once the domain is active, update `siteUrl` in `data/profile.ts` and redeploy.

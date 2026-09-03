@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: profile.siteUrl, changeFrequency: 'monthly', priority: 1 },
     ...projects.map((project) => ({
-      url: `${profile.siteUrl}/work/${project.slug}`,
+      url: `${profile.siteUrl}/work/${project.slug}.html`,
       changeFrequency: 'yearly' as const,
       priority: 0.7,
     })),
