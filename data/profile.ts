@@ -9,7 +9,8 @@ export const profile = {
   // Add your public URLs below. Leave an empty string to hide that link from the site.
   linkedinUrl: '',
   upworkUrl: '',
-  email: '',
+  email: 'normanlestercanete@gmail.com',
+  emailSubject: 'I need your service. Lets talk.',
   // Add /resume/norman-lester-canete-resume.pdf after placing the file in public/resume.
   resumeUrl: '',
   // Set this to your production domain (for example https://yourdomain.com) after deployment.

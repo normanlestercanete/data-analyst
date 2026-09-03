@@ -29,7 +29,7 @@ All professional content is separated from presentation:
 - `data/skills.ts` — expertise and skills
 - `data/experience.ts` — verified employment history; the section stays hidden while the array is empty
 
-Empty links are intentionally not rendered. Add Norman's verified LinkedIn, Upwork, email, and production domain in `data/profile.ts`.
+Empty links are intentionally not rendered. Add Norman's verified LinkedIn, Upwork, and production domain in `data/profile.ts`. The contact email and prefilled inquiry subject are configured there as well.
 
 ## Add the profile photo
 

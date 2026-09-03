@@ -130,7 +130,14 @@ export default function Home() {
         <p>Let&apos;s talk about Power BI projects, dashboard development, reporting improvements, analytics work, or the right professional opportunity.</p>
         {(profile.email || profile.linkedinUrl || profile.upworkUrl) && (
           <div className="contact-actions">
-            {profile.email && <a className="button primary" href={`mailto:${profile.email}`}><Mail size={17} /> Email me</a>}
+            {profile.email && (
+              <a
+                className="button primary"
+                href={`mailto:${profile.email}?subject=${encodeURIComponent(profile.emailSubject)}`}
+              >
+                <Mail size={17} /> {profile.email}
+              </a>
+            )}
             {profile.linkedinUrl && <a className="button secondary" href={profile.linkedinUrl} target="_blank" rel="noreferrer"><Link2 size={17} /> LinkedIn</a>}
             {profile.upworkUrl && <a className="button secondary" href={profile.upworkUrl} target="_blank" rel="noreferrer">Upwork <ArrowUpRight size={17} /></a>}
           </div>
