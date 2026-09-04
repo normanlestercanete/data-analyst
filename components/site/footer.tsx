@@ -11,7 +11,7 @@ export function Footer() {
         {profile.linkedinUrl && <a href={profile.linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a>}
         {profile.upworkUrl && <a href={profile.upworkUrl} target="_blank" rel="noreferrer">Upwork</a>}
       </div>
-      <p>© {year} {profile.shortName}</p>
+      <p>© {year} {profile.name}</p>
     </footer>
   );
 }
