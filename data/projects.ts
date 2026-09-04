@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     slug: 'workplace-occupancy-attendance-analytics',
     title: 'Multi-Site Workplace Attendance & Occupancy Analytics',
-    shortDescription: 'A multi-source Power BI model for attendance, occupancy, roster allocation, location, and geography-aware working-day analysis.',
+    shortDescription: 'A multi-source Power BI model for attendance, occupancy, roster allocation, location, and geography-aware working-day analysis. Its insights informed an organizational reshuffle, improving space and resource allocation while delivering substantial cost savings.',
     description: 'A workplace reporting environment spanning multiple offices, buildings, employees, teams, business streams, resident classifications, roster allocations, attendance records, holidays, and monthly reporting.',
     role: 'Power BI development · Advanced DAX · Data modeling · Power Query',
     technologies: ['Power BI', 'DAX', 'Power Query', 'Data Modeling', 'Business Rules', 'Data Quality'],
