@@ -1,9 +1,9 @@
 import { PowerBIReport } from '@/components/site/power-bi-report';
 
 const reportViews = [
-  { name: 'Region Detail', question: 'Where should we look first?', copy: 'Compare capacity, headcount, occupancy, and attendance across the selected region before investigating individual locations.' },
-  { name: 'Country Detail', question: 'Does the regional picture hold locally?', copy: 'Bring the sites in one country together and compare business units using the same reporting month.' },
-  { name: 'Site Detail', question: 'Who is using this office?', copy: 'Explore seat demand and the mix of resident and non-resident visitors alongside twelve months of attendance and occupancy.' },
+  { name: 'Regional Performance', question: 'Where should we look first?', copy: 'Compare capacity, headcount, occupancy, and attendance across the selected region before investigating individual locations.' },
+  { name: 'Country Performance', question: 'Does the regional picture hold locally?', copy: 'Bring the sites in one country together and compare business units using the same reporting month.' },
+  { name: 'Site Performance', question: 'Who is using this office?', copy: 'Explore seat demand and the mix of resident and non-resident visitors alongside twelve months of attendance and occupancy.' },
   { name: 'Workforce Trends', question: 'What is changing in the workforce?', copy: 'Follow headcount, hires, departures, transfers, and retention to put workplace demand in context.' },
 ];
 
