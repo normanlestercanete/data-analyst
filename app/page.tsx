@@ -89,7 +89,7 @@ export default function Home() {
       </section>
 
       <section id="work" className="section work shell">
-        <SectionHeading index="03" eyebrow="Featured Power BI work" title="A clearer view of people and place." copy="Explore Quantara, an interactive workplace and workforce analytics project, from the business question to the model behind the answer." />
+        <SectionHeading index="03" eyebrow="Featured Power BI work" title="A clearer view of people, place, and cost." copy="Explore Quantara, a five-page Power BI project connecting workplace utilization, workforce trends, and lease costs, from the business question to the model behind the answer." />
         <WorkplaceCaseStudy />
       </section>
 
