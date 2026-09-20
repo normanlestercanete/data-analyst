@@ -215,6 +215,46 @@ h1 em { color: var(--accent); font-style: normal; font-weight: 400; }
 .next-project span { color: var(--muted); font: 500 10px/1 var(--font-geist-mono); text-transform: uppercase; }
 .next-project strong { display: block; margin-top: 10px; font-size: clamp(24px,4vw,46px); letter-spacing: -.04em; }
 
+.workplace-intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; padding-top: 36px; border-top: 1px solid var(--border); }
+.workplace-intro h3 { margin: 0; font-size: clamp(38px,5vw,66px); font-weight: 500; line-height: 1.08; letter-spacing: -.045em; }
+.workplace-copy p { margin: 0 0 20px; color: #b7c2cf; font-size: 17px; line-height: 1.8; }
+.workplace-copy .data-note { font-size: 13px; color: var(--muted); padding-left: 16px; border-left: 2px solid var(--accent); }
+.workplace-stack { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 36px; }
+.workplace-stack span { padding: 8px 12px; border: 1px solid var(--border); color: #b7c2cf; font: 500 11px/1.4 var(--font-geist-mono); }
+.report-viewer { border: 1px solid var(--border); background: var(--surface); scroll-margin-top: 100px; }
+.report-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding: 24px; }
+.report-label { color: var(--accent); font: 500 10px/1.5 var(--font-geist-mono); text-transform: uppercase; letter-spacing: .1em; }
+.report-toolbar h3 { font-size: 20px; line-height: 1.4; font-weight: 500; margin: 8px 0 0; }
+.report-frame { position: relative; width: 100%; padding-top: calc(56.25% + 56px); background: #050925; }
+.report-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.report-help { margin: 0; padding: 18px 24px; color: var(--muted); font-size: 13px; line-height: 1.7; border-top: 1px solid var(--border); }
+.report-pending { min-height: 300px; display: grid; align-content: center; justify-items: center; gap: 12px; padding: 32px; text-align: center; background: #050925; }
+.report-pending p { margin: 0; font-size: 20px; }
+.report-pending span { color: var(--muted); font-size: 13px; }
+.report-tour { padding-top: 64px; }
+.story-heading h3 { margin: 16px 0; font-size: clamp(28px,3vw,38px); font-weight: 500; letter-spacing: -.035em; line-height: 1.15; }
+.story-heading > p:last-child { color: var(--muted); font-size: 15px; line-height: 1.7; }
+.report-view-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 0; margin-top: 28px; border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+.report-view-grid section { padding: 28px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.report-view-grid h4, .workplace-method h4 { margin: 16px 0 12px; font-size: 20px; font-weight: 500; line-height: 1.4; }
+.report-view-grid section p, .workplace-method section p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+.workplace-insight { margin-block: 52px; padding: clamp(24px,4vw,44px); background: var(--accent-soft); border-left: 2px solid var(--accent); }
+.workplace-insight h3 { max-width: 740px; margin: 18px 0; font-size: clamp(28px,3.5vw,42px); font-weight: 500; letter-spacing: -.035em; line-height: 1.2; }
+.workplace-insight > p:last-child { max-width: 860px; margin: 0; color: #b7c2cf; font-size: 16px; line-height: 1.8; }
+.workplace-method { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; padding-top: 12px; }
+.workplace-method section { padding: 0 0 24px; margin-bottom: 24px; border-bottom: 1px solid var(--border); }
+.workplace-method h4 { margin-top: 0; }
+.workplace-result { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; margin: 22px 0 0; padding-top: 28px; border-top: 1px solid var(--border); color: #dbe4ee; font-size: 20px; line-height: 1.6; }
+.workplace-result span { color: var(--accent); font: 500 11px/1.6 var(--font-geist-mono); text-transform: uppercase; letter-spacing: .08em; }
+@media (max-width: 760px) {
+  .workplace-intro, .workplace-method, .workplace-result { grid-template-columns: 1fr; gap: 24px; }
+  .workplace-intro .eyebrow { font-size: 10px; }
+  .report-view-grid { grid-template-columns: 1fr; }
+  .report-toolbar, .report-help { padding: 18px; }
+  .report-toolbar h3 { font-size: 17px; }
+  .report-view-grid section { padding: 24px; }
+}
+
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 
 @media (max-width: 900px) {

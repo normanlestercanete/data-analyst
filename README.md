@@ -25,7 +25,9 @@ pnpm build
 All professional content is separated from presentation:
 
 - `data/profile.ts` — name, positioning, contact links, résumé path, and production URL
-- `data/projects.ts` — anonymized case studies and project technology tags
+- `data/workplace-report.ts` — public Power BI embed URL and report title
+- `components/site/workplace-case-study.tsx` — featured Quantara project story and exploration guide
+- `data/projects.ts` — earlier case studies retained at their existing URLs
 - `data/skills.ts` — expertise and skills
 - `data/experience.ts` — verified employment history; the section stays hidden while the array is empty
 
@@ -38,6 +40,8 @@ The current supplied portrait is at `public/images/profile/norman.png`. To repla
 The navigation and footer logo is stored at `public/images/brand/nlc-logo.png`.
 
 ## Add project screenshots
+
+The homepage Work section now features the live Quantara report instead of illustrative dashboard cards. Update its public URL in `data/workplace-report.ts` using the `src` from Power BI's **Publish to web** iframe. The same URL powers the responsive embed and the **Open full report** link. Keep the report at 16:9 with Fit to page; the website reserves extra height for Power BI's navigation bar. Region Detail is the recommended landing page. The story identifies the report as a demonstration using synthetic data.
 
 Put anonymized images in `public/images/projects/`. Add `featuredImage` and `gallery` paths to a project in `data/projects.ts`, then replace or extend the `ProjectVisual` component in `components/site/project-visual.tsx` to render them. Never publish confidential names or source data.
 

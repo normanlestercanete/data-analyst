@@ -2,12 +2,11 @@ import Image from 'next/image';
 import { ArrowDownRight, ArrowUpRight, Bot, Link2, Mail } from 'lucide-react';
 import { Navigation } from '@/components/site/navigation';
 import { SectionHeading } from '@/components/site/section-heading';
-import { ProjectCard } from '@/components/site/project-card';
+import { WorkplaceCaseStudy } from '@/components/site/workplace-case-study';
 import { ExperienceTimeline } from '@/components/site/experience-timeline';
 import { Footer } from '@/components/site/footer';
 import { profile } from '@/data/profile';
 import { expertise, skills } from '@/data/skills';
-import { projects } from '@/data/projects';
 import { publicPath } from '@/lib/paths';
 
 const workingApproach = [
@@ -90,10 +89,8 @@ export default function Home() {
       </section>
 
       <section id="work" className="section work shell">
-        <SectionHeading index="03" eyebrow="Selected BI work" title="The model behind the metric." copy="Anonymized case studies that show how complex reporting problems are reconciled, modeled, calculated, validated, and made usable." />
-        <div className="project-list">
-          {projects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index} />)}
-        </div>
+        <SectionHeading index="03" eyebrow="Featured Power BI work" title="A clearer view of people and place." copy="Explore Quantara, an interactive workplace and workforce analytics project, from the business question to the model behind the answer." />
+        <WorkplaceCaseStudy />
       </section>
 
       <section className="section approach shell">
