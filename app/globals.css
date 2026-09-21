@@ -307,3 +307,23 @@ h1 em { color: var(--accent); font-style: normal; font-weight: 400; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Featured reports stay concise; full narratives and embeds live on case-study pages. */
+.featured-reports { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
+.featured-report { padding: clamp(24px,3vw,40px); border: 1px solid var(--border); border-top: 3px solid #527af2; background: var(--surface); display: flex; flex-direction: column; align-items: flex-start; }
+.featured-report-2 { border-top-color: #72b4ab; }
+.featured-report-top { display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; gap: 12px; }
+.featured-report-top > span:last-child { color: var(--muted); font-size: 13px; }
+.featured-report h3 { margin: 32px 0 18px; font-size: clamp(27px,3vw,38px); line-height: 1.2; letter-spacing: -.025em; font-weight: 500; }
+.featured-report > p { font-size: 16px; line-height: 1.8; color: #b7c2cf; margin: 0; }
+.featured-report ul { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; margin: 24px 0 32px; }
+.featured-report li { border: 1px solid var(--border); padding: 6px 9px; font-size: 13px; color: #b7c2cf; }
+.featured-report .button { margin-top: auto; }
+.featured-report > small { margin-top: 18px; font-size: 12px; color: var(--muted); }
+.report-case-hero { padding-bottom: 48px; }
+.report-case-summary { max-width: 760px; color: #b7c2cf; font-size: 18px; line-height: 1.8; margin-top: 28px; }
+.report-contact { padding: clamp(32px,5vw,64px); margin-block: 72px; background: var(--surface); border: 1px solid var(--border); }
+.report-contact h2 { max-width: 750px; font-size: clamp(30px,4vw,48px); line-height: 1.15; margin: 20px 0; }
+.report-contact > p:not(.section-index) { max-width: 680px; color: #b7c2cf; font-size: 17px; line-height: 1.8; }
+.report-contact .contact-actions { margin-top: 28px; }
+@media (max-width: 820px) { .featured-reports { grid-template-columns: 1fr; } }

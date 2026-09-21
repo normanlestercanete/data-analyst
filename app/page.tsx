@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ArrowDownRight, ArrowUpRight, Bot, Link2, Mail } from 'lucide-react';
 import { Navigation } from '@/components/site/navigation';
 import { SectionHeading } from '@/components/site/section-heading';
-import { WorkplaceCaseStudy } from '@/components/site/workplace-case-study';
+import { FeaturedReports } from '@/components/site/featured-reports';
 import { ExperienceTimeline } from '@/components/site/experience-timeline';
 import { Footer } from '@/components/site/footer';
 import { profile } from '@/data/profile';
@@ -89,8 +89,8 @@ export default function Home() {
       </section>
 
       <section id="work" className="section work shell">
-        <SectionHeading index="03" eyebrow="Featured Power BI work" title="A clearer view of people, place, and cost." copy="Explore Quantara, a five-page Power BI project connecting workplace utilization, workforce trends, and lease costs, from the business question to the model behind the answer." />
-        <WorkplaceCaseStudy />
+        <SectionHeading index="03" eyebrow="Featured Power BI work" title="Business questions. Working reports." copy="Explore two Power BI projects, from workplace and lease decisions to marketing, sales, and customer growth. Each case study includes the interactive report and the thinking behind its model." />
+        <FeaturedReports />
       </section>
 
       <section className="section approach shell">

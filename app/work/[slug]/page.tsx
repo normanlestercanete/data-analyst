@@ -7,14 +7,18 @@ import { Footer } from '@/components/site/footer';
 import { getProject, projects } from '@/data/projects';
 import { profile } from '@/data/profile';
 import { publicPath } from '@/lib/paths';
+import { featuredReports, getFeaturedReport } from '@/data/featured-reports';
+import { WorkplaceCaseStudy } from '@/components/site/workplace-case-study';
+import { AsterWorksCaseStudy } from '@/components/site/asterworks-case-study';
+import { ReportContact } from '@/components/site/report-contact';
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return [...projects, ...featuredReports].map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const project = getProject(slug);
+  const project = getFeaturedReport(slug) || getProject(slug);
   if (!project) return {};
   const url = profile.siteUrl ? `${profile.siteUrl}/work/${project.slug}.html` : undefined;
   return {
@@ -28,6 +32,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const report = getFeaturedReport(slug);
+  if (report) return (
+    <main className="case-page">
+      <Navigation />
+      <header className="case-hero shell report-case-hero">
+        <a className="back-link" href={publicPath('/#work')}><ArrowLeft size={15} /> Back to featured work</a>
+        <p className="eyebrow"><span /> {report.brand} / Power BI case study</p>
+        <h1>{report.title}</h1>
+        <p className="report-case-summary">{report.description}</p>
+      </header>
+      <div className="shell">
+        {report.slug === 'quantara-workplace-analytics' ? <WorkplaceCaseStudy /> : <AsterWorksCaseStudy />}
+        <ReportContact />
+      </div>
+      <Footer />
+    </main>
+  );
   const project = getProject(slug);
   if (!project) notFound();
   const index = projects.findIndex((item) => item.slug === project.slug);

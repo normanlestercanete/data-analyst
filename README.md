@@ -83,3 +83,7 @@ data/                     editable professional content
 public/images/            profile, project, and social images
 public/resume/            downloadable résumé
 ```
+
+## Featured Power BI reports
+
+The homepage shows concise cards for Quantara and AsterWorks. Their interactive reports, narratives, and email calls to action are on `/work/quantara-workplace-analytics.html` and `/work/asterworks-revenue-analytics.html`. Edit summaries and the AsterWorks public embed URL in `data/featured-reports.ts`; Quantara’s URL remains in `data/workplace-report.ts`. Existing case-study URLs remain available.
