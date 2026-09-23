@@ -1,11 +1,11 @@
 export const profile = {
   name: 'Norman Lester Canete',
   shortName: 'Norman Lester',
-  role: 'Power BI & Business Intelligence Specialist',
+  role: 'Power BI Developer & Business Intelligence Specialist',
   positioning: 'Data Analytics · DAX · Power Query · Data Modeling · Reporting Automation',
   location: 'Philippines',
   intro:
-    'I solve complex reporting problems by turning messy real-world data, business rules, and operational requirements into maintainable Power BI solutions.',
+    'I build Power BI dashboards and data models that turn messy source data and complex business rules into reporting people can trust. I work across DAX, Power Query, KPI design, and reporting automation.',
   // Add your public URLs below. Leave an empty string to hide that link from the site.
   linkedinUrl: '',
   upworkUrl: '',

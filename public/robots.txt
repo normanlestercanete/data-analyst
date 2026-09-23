@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://normanlestercanete.github.io/data-analyst/sitemap.xml

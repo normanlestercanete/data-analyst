@@ -25,6 +25,7 @@ export default function Home() {
     name: profile.name,
     jobTitle: profile.role,
     description: profile.intro,
+    knowsAbout: ['Power BI', 'DAX', 'Power Query', 'Data modeling', 'Business intelligence', 'Dashboard development'],
     address: { '@type': 'PostalAddress', addressCountry: 'PH' },
     ...(profile.siteUrl ? { url: profile.siteUrl } : {}),
     ...(sameAs.length ? { sameAs } : {}),
@@ -76,7 +77,7 @@ export default function Home() {
       </section>
 
       <section id="expertise" className="section expertise shell">
-        <SectionHeading index="02" eyebrow="Core expertise" title="From raw source to reliable reporting." copy="Power BI is the core platform, supported by deep work across DAX, Power Query, data modeling, business logic, visualization, and automation." />
+        <SectionHeading index="02" eyebrow="Core expertise" title="From raw source to reliable reporting." copy="As a Power BI developer, I work across DAX, Power Query, data modeling, business logic, dashboard design, and reporting automation." />
         <div className="expertise-list">
           {expertise.map((item, index) => (
             <article key={item.title}>
@@ -89,7 +90,7 @@ export default function Home() {
       </section>
 
       <section id="work" className="section work shell">
-        <SectionHeading index="03" eyebrow="Featured Power BI work" title="Business questions. Working reports." copy="Explore two Power BI projects, from workplace and lease decisions to marketing, sales, and customer growth. Each case study includes the interactive report and the thinking behind its model." />
+        <SectionHeading index="03" eyebrow="Featured Power BI work" title="Business questions. Working reports." copy="Explore three interactive Power BI reports covering workplace and lease decisions, revenue and marketing performance, and supply-chain operations. Each case study explains the business question and the model behind the dashboard." />
         <FeaturedReports />
       </section>
 

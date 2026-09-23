@@ -22,20 +22,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const project = getFeaturedReport(slug) || getProject(slug);
   if (!project) return {};
   const url = profile.siteUrl ? `${profile.siteUrl}/work/${project.slug}.html` : undefined;
+  const image = profile.siteUrl
+    ? 'preview' in project
+      ? `${profile.siteUrl}/images/reports/${project.preview}`
+      : `${profile.siteUrl}/og.png`
+    : undefined;
   return {
-    title: `${project.title} — ${profile.name}`,
+    title: `${project.title} | Power BI Case Study | ${profile.name}`,
     description: project.description,
     ...(url ? { alternates: { canonical: url } } : {}),
-    openGraph: { title: project.title, description: project.description, type: 'article', url, images: [] },
-    twitter: { card: 'summary', title: project.title, description: project.description, images: [] },
+    openGraph: { title: `${project.title} | Power BI Case Study`, description: project.description, type: 'article', url, ...(image ? { images: [image] } : {}) },
+    twitter: { card: 'summary_large_image', title: project.title, description: project.description, ...(image ? { images: [image] } : {}) },
   };
 }
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const report = getFeaturedReport(slug);
-  if (report) return (
+  if (report) {
+    const reportSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      name: report.title,
+      description: report.description,
+      author: { '@type': 'Person', name: profile.name },
+      about: report.topics,
+      ...(profile.siteUrl ? {
+        url: `${profile.siteUrl}/work/${report.slug}.html`,
+        image: `${profile.siteUrl}/images/reports/${report.preview}`,
+      } : {}),
+    };
+    return (
     <main className="case-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reportSchema).replace(/</g, '\\u003c') }} />
       <Navigation />
       <header className="case-hero shell report-case-hero">
         <a className="back-link" href={publicPath('/#work')}><ArrowLeft size={15} /> Back to featured work</a>
@@ -50,6 +69,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <Footer />
     </main>
   );
+  }
   const project = getProject(slug);
   if (!project) notFound();
   const index = projects.findIndex((item) => item.slug === project.slug);

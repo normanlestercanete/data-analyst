@@ -76,8 +76,8 @@ app/
   layout.tsx              global metadata and fonts
   page.tsx                homepage
   work/[slug]/page.tsx    generated case-study pages
-  robots.ts               robots policy
-  sitemap.ts              sitemap generated from project data
+public/robots.txt          crawler hint and sitemap location
+public/sitemap.xml         indexable homepage and case-study URLs
 components/site/          reusable portfolio components
 data/                     editable professional content
 public/images/            profile, project, and social images
@@ -87,3 +87,9 @@ public/resume/            downloadable résumé
 ## Featured Power BI reports
 
 The homepage shows concise cards for Quantara, AsterWorks, and Northline Supply. Their interactive reports, narratives, and email calls to action live on separate `/work/` case-study pages. Edit summaries, preview images, and the AsterWorks and Northline public embed URLs in `data/featured-reports.ts`; Quantara’s URL remains in `data/workplace-report.ts`. Existing case-study URLs remain available.
+
+## Search visibility
+
+The GitHub Pages build publishes a static sitemap at `https://normanlestercanete.github.io/data-analyst/sitemap.xml`. Update `public/sitemap.xml` whenever you add or remove a case-study URL; the sitemap must contain the same canonical URLs that the pages use. `public/robots.txt` is also published under the project path, though crawler rules for the shared `github.io` host are controlled at the host root, which this repository cannot edit.
+
+To monitor indexing, add `https://normanlestercanete.github.io/data-analyst/` as a **URL-prefix property** in Google Search Console, verify ownership using the method it offers, and submit the sitemap URL. Inspect the homepage and featured case-study URLs there to see whether Google has indexed them. A sitemap helps discovery but does not guarantee indexing or ranking. Keep titles and case-study copy accurate to the work shown, and link to the portfolio from relevant professional profiles.

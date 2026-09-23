@@ -16,26 +16,26 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   ...(profile.siteUrl ? { metadataBase: new URL(profile.siteUrl) } : {}),
   title: {
-    default: 'Norman Lester Canete — Power BI & Business Intelligence Specialist',
+    default: 'Norman Lester Canete | Power BI Developer & Data Analyst',
     template: '%s',
   },
-  description: 'Power BI, Business Intelligence, DAX, Power Query, data modeling, KPI design, and reporting automation by Norman Lester Canete.',
+  description: 'Explore Power BI dashboards and case studies by Norman Lester Canete, a Power BI developer specializing in DAX, Power Query, data modeling, and business reporting.',
   applicationName: 'Norman Lester Canete Portfolio',
   authors: [{ name: profile.name }],
   creator: profile.name,
-  keywords: ['Norman Lester Canete', 'Power BI Specialist', 'Power BI Developer', 'DAX Specialist', 'Data Analyst', 'Business Intelligence', 'Power BI Philippines'],
-  ...(profile.siteUrl ? { alternates: { canonical: profile.siteUrl } } : {}),
+  keywords: ['Norman Lester Canete', 'Power BI Developer', 'Data Analyst', 'Business Intelligence', 'DAX', 'Power Query'],
+  ...(profile.siteUrl ? { alternates: { canonical: `${profile.siteUrl}/` } } : {}),
   openGraph: {
-    title: 'Norman Lester Canete — Power BI & Business Intelligence Specialist',
-    description: 'Turning complex business data into clear, dependable Power BI reporting and decision-support systems.',
+    title: 'Norman Lester Canete | Power BI Developer & Data Analyst',
+    description: 'Power BI dashboards, data models, and case studies spanning workplace, revenue, and supply-chain analytics.',
     type: 'website',
     siteName: 'Norman Lester Canete',
-    ...(profile.siteUrl ? { url: profile.siteUrl, images: [{ url: `${profile.siteUrl}/og.png`, width: 1200, height: 630, alt: 'Norman Lester Canete — Power BI & Business Intelligence Specialist' }] } : {}),
+    ...(profile.siteUrl ? { url: `${profile.siteUrl}/`, images: [{ url: `${profile.siteUrl}/og.png`, width: 1200, height: 630, alt: 'Norman Lester Canete Power BI developer portfolio' }] } : {}),
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Norman Lester Canete — Power BI & Business Intelligence Specialist',
-    description: 'Turning complex business data into clear, dependable Power BI reporting and decision-support systems.',
+    title: 'Norman Lester Canete | Power BI Developer & Data Analyst',
+    description: 'Explore Power BI dashboards, data models, and business intelligence case studies.',
     ...(profile.siteUrl ? { images: [`${profile.siteUrl}/og.png`] } : {}),
   },
 };
@@ -47,6 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {profile.siteUrl && <link rel="sitemap" type="application/xml" href={`${profile.siteUrl}/sitemap.xml`} />}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
