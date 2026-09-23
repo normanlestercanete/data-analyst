@@ -312,6 +312,7 @@ h1 em { color: var(--accent); font-style: normal; font-weight: 400; }
 .featured-reports { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
 .featured-report { padding: clamp(24px,3vw,40px); border: 1px solid var(--border); border-top: 3px solid #527af2; background: var(--surface); display: flex; flex-direction: column; align-items: flex-start; }
 .featured-report-2 { border-top-color: #72b4ab; }
+.featured-report-3 { border-top-color: #267b93; }
 .featured-report-top { display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; gap: 12px; }
 .featured-report-top > span:last-child { color: var(--muted); font-size: 13px; }
 .featured-report h3 { margin: 32px 0 18px; font-size: clamp(27px,3vw,38px); line-height: 1.2; letter-spacing: -.025em; font-weight: 500; }

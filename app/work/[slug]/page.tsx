@@ -10,6 +10,7 @@ import { publicPath } from '@/lib/paths';
 import { featuredReports, getFeaturedReport } from '@/data/featured-reports';
 import { WorkplaceCaseStudy } from '@/components/site/workplace-case-study';
 import { AsterWorksCaseStudy } from '@/components/site/asterworks-case-study';
+import { NorthlineCaseStudy } from '@/components/site/northline-case-study';
 import { ReportContact } from '@/components/site/report-contact';
 
 export function generateStaticParams() {
@@ -43,7 +44,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <p className="report-case-summary">{report.description}</p>
       </header>
       <div className="shell">
-        {report.slug === 'quantara-workplace-analytics' ? <WorkplaceCaseStudy /> : <AsterWorksCaseStudy />}
+        {report.slug === 'quantara-workplace-analytics' ? <WorkplaceCaseStudy /> : report.slug === 'asterworks-revenue-analytics' ? <AsterWorksCaseStudy /> : <NorthlineCaseStudy />}
         <ReportContact />
       </div>
       <Footer />

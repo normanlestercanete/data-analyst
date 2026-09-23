@@ -86,4 +86,4 @@ public/resume/            downloadable résumé
 
 ## Featured Power BI reports
 
-The homepage shows concise cards for Quantara and AsterWorks. Their interactive reports, narratives, and email calls to action are on `/work/quantara-workplace-analytics.html` and `/work/asterworks-revenue-analytics.html`. Edit summaries and the AsterWorks public embed URL in `data/featured-reports.ts`; Quantara’s URL remains in `data/workplace-report.ts`. Existing case-study URLs remain available.
+The homepage shows concise cards for Quantara, AsterWorks, and Northline Supply. Their interactive reports, narratives, and email calls to action live on separate `/work/` case-study pages. Edit summaries, preview images, and the AsterWorks and Northline public embed URLs in `data/featured-reports.ts`; Quantara’s URL remains in `data/workplace-report.ts`. Existing case-study URLs remain available.
