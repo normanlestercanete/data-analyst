@@ -34,6 +34,17 @@ export const featuredReports = [
     topics: ['Inventory health', 'Order fulfillment', 'Warehouse throughput'],
     report: { title: 'Northline Supply | Operations & Inventory Analytics', embedUrl: 'https://app.powerbi.com/view?r=eyJrIjoiMTdlYzhjMDgtYTI4OC00MTFlLWI4ZDktYmQyMDJhMjMwNTRhIiwidCI6IjAyZGM5Y2UwLTU4YWQtNDMxNS1hZDA2LTM3ZTdiNTgzZGU1YSIsImMiOjEwfQ%3D%3D' },
   },
+  {
+    slug: 'velahome-service-intelligence',
+    brand: 'VelaHome',
+    title: 'Customer Support & Service Intelligence',
+    description: 'Follow customer cases from intake to resolution. Compare response speed, first-contact resolution, satisfaction, backlog, and team capacity to see where service needs attention.',
+    scope: '4 report pages',
+    preview: 'velahome-first-page.png',
+    previewAlt: 'VelaHome Executive Service Pulse Power BI report preview',
+    topics: ['Service quality', 'Case flow', 'Team capacity'],
+    report: { title: 'VelaHome | Customer Support & Service Intelligence', embedUrl: 'https://app.powerbi.com/view?r=eyJrIjoiZDRjN2Q0YmQtMGU3Yy00MTMyLWIyOTEtNjNlYTU4MmE2ODVhIiwidCI6IjAyZGM5Y2UwLTU4YWQtNDMxNS1hZDA2LTM3ZTdiNTgzZGU1YSIsImMiOjEwfQ%3D%3D' },
+  },
 ];
 
 export const getFeaturedReport = (slug: string) => featuredReports.find(report => report.slug === slug);
