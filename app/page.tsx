@@ -90,7 +90,7 @@ export default function Home() {
       </section>
 
       <section id="work" className="section work shell">
-        <SectionHeading index="03" eyebrow="Featured Power BI work" title="Business questions. Working reports." copy="Explore three interactive Power BI reports covering workplace and lease decisions, revenue and marketing performance, and supply-chain operations. Each case study explains the business question and the model behind the dashboard." />
+        <SectionHeading index="03" eyebrow="Featured Power BI work" title="Business questions. Working reports." copy="Explore interactive Power BI case studies spanning workplace costs, revenue growth, supply-chain operations, and customer service. Each one connects a business question to the data model and decisions behind the dashboard." />
         <FeaturedReports />
       </section>
 
