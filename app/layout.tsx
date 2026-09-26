@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { profile } from '@/data/profile';
+import { publicPath } from '@/lib/paths';
 import './globals.css';
 
 const geistSans = Geist({
@@ -48,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="icon" href={publicPath('/favicon.png')} type="image/png" />
         {profile.siteUrl && <link rel="sitemap" type="application/xml" href={`${profile.siteUrl}/sitemap.xml`} />}
       </head>
       <body
