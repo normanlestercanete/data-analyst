@@ -7,8 +7,8 @@ export const profile = {
   intro:
     'I build Power BI dashboards and data models that turn messy source data and complex business rules into reporting people can trust. I work across DAX, Power Query, KPI design, and reporting automation.',
   // Add your public URLs below. Leave an empty string to hide that link from the site.
-  linkedinUrl: '',
-  upworkUrl: '',
+  linkedinUrl: 'https://www.linkedin.com/in/norman-lester-c-55a2b9111/',
+  upworkUrl: 'https://www.upwork.com/freelancers/~01261defcdcedd2c28',
   email: 'normanlestercanete@gmail.com',
   emailSubject: 'I need your service. Lets talk.',
   // Add /resume/norman-lester-canete-resume.pdf after placing the file in public/resume.

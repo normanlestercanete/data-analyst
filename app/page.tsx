@@ -3,6 +3,7 @@ import { ArrowDownRight, ArrowUpRight, Bot, Link2, Mail } from 'lucide-react';
 import { Navigation } from '@/components/site/navigation';
 import { SectionHeading } from '@/components/site/section-heading';
 import { FeaturedReports } from '@/components/site/featured-reports';
+import { TechnicalProof } from '@/components/site/technical-proof';
 import { ExperienceTimeline } from '@/components/site/experience-timeline';
 import { Footer } from '@/components/site/footer';
 import { profile } from '@/data/profile';
@@ -92,6 +93,7 @@ export default function Home() {
       <section id="work" className="section work shell">
         <SectionHeading index="03" eyebrow="Featured Power BI work" title="Business questions. Working reports." copy="Explore interactive Power BI case studies spanning workplace costs, revenue growth, supply-chain operations, and customer service. Each one connects a business question to the data model and decisions behind the dashboard." />
         <FeaturedReports />
+        <TechnicalProof />
       </section>
 
       <section className="section approach shell">
